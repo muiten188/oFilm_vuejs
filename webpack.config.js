@@ -1,7 +1,7 @@
 module.exports = {
-    entry: "./src/app.js",
+    entry: "./src/main.js",
     output: {
-        filename: "vue_app_bundle.js"
+        filename: "./build/vue_app_bundle.js"
     },
     module: {
         loaders: [
@@ -15,4 +15,9 @@ module.exports = {
             }
         ]
     },
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.js'
+        }
+    }
 }
